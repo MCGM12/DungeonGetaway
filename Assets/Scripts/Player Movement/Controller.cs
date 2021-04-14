@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     public float moveSpeed = 6f;
 
     Rigidbody2D rb;
-    Camera viewCamera;
+   public Camera viewCamera;
     Vector3 velocity;
 
     // Start is called before the first frame update

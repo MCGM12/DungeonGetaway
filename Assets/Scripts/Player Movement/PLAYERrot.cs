@@ -5,7 +5,7 @@ using UnityEngine;
 public class PLAYERrot : MonoBehaviour
 {
     float speed = 20f;
-    GameObject player;
+    public GameObject player;
 
     void Start()
     {
