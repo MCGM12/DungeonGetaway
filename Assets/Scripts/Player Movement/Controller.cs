@@ -7,14 +7,14 @@ public class Controller : MonoBehaviour
     public float moveSpeed = 6f;
 
     Rigidbody2D rb;
-   public Camera viewCamera;
+   //public Camera viewCamera;
     Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        viewCamera = Camera.main;
+      //  viewCamera = Camera.main;
     }
 
     // Update is called once per frame
