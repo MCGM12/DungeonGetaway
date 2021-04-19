@@ -8,7 +8,7 @@ public class DashMovement : MonoBehaviour
 
     public int dashSpeed = 200;
 
-    bool dash = true;
+    bool dash = false;
 
   public  int dashCooldown = 80;
 
