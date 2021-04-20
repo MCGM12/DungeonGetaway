@@ -8,10 +8,17 @@ public class Controller : MonoBehaviour
 
     Vector2 movement;
 
+<<<<<<< HEAD
+    Vector2 movement;
+
     private Rigidbody2D rb;
 <<<<<<< HEAD
    //public Camera viewCamera;
 =======
+  
+>>>>>>> main
+=======
+    private Rigidbody2D rb;
   
 >>>>>>> main
     Vector3 velocity;
@@ -26,8 +33,13 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
 
+=======
+        velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
+
+>>>>>>> main
      
     }
 
