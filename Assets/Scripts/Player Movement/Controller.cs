@@ -6,21 +6,29 @@ public class Controller : MonoBehaviour
 {
     public float moveSpeed = 6f;
 
+    Vector2 movement;
+
     private Rigidbody2D rb;
+<<<<<<< HEAD
    //public Camera viewCamera;
+=======
+  
+>>>>>>> main
     Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-      //  viewCamera = Camera.main;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
+
+     
     }
 
     private void FixedUpdate()
