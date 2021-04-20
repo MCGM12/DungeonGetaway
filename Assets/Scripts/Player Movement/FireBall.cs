@@ -14,14 +14,14 @@ public class FireBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        Debug.Log("Get Sniped ");
+        Destroy(gameObject,5f);
+     
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "enemy")
         {
             Destroy(gameObject);
         }
