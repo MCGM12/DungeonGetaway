@@ -52,7 +52,7 @@ public class TestFOV : MonoBehaviour
 
     private void Update()
     {
-        pT = GameObject.FindGameObjectWithTag("Player").transform;
+        //pT = GameObject.FindGameObjectWithTag("Player").transform;
         DrawFieldOfView();
         //FindVisibleTargets();
         if(spotted)

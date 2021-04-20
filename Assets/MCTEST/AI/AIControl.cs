@@ -33,6 +33,7 @@ public class AIControl : MonoBehaviour
     
     void Update()
     {
+        playerSpotted = fov.spotted;
         dest.target = player.transform;
         if (playerSpotted)
         {
