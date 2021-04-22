@@ -9,12 +9,13 @@ public class FireBall : MonoBehaviour
 
     void Start()
     {
-
+        Destroy(gameObject, 4f);
     }
 
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject,5f);
+        //Destroy(gameObject,5f);
      
     }
 

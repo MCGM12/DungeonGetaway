@@ -29,14 +29,15 @@ public class DashMovement : MonoBehaviour
 
 
 
-        Rgb2d.velocity = Vector2.zero;
+        //Rgb2d.velocity = Vector2.zero;
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && dash == true)
         {
+            Rgb2d.velocity = Vector2.zero;
             Vector2 mouseDirection = (Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2)).normalized;
 
-            Rgb2d.AddForce(mouseDirection * dashSpeed * Time.fixedDeltaTime);
+            Rgb2d.AddForce(mouseDirection * dashSpeed * Time.deltaTime*2);
             dash = false;
             dashCooldown = 80;
         }
