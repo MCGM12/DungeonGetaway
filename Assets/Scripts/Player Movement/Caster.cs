@@ -30,5 +30,15 @@ public class Caster : MonoBehaviour
 
         Rigidbody2D rb2d = fireball.GetComponent<Rigidbody2D>();
         rb2d.AddForce(FirePoint.up * FireballForce, ForceMode2D.Impulse);
+        FireAudio();
+    }
+
+
+
+
+    //AUDIO STUFFS
+    void FireAudio()
+    {
+
     }
 }
