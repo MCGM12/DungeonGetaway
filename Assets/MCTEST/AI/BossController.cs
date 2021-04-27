@@ -2,22 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
+
 
 public class BossController : MonoBehaviour
 {
-    [SerializeField] private UnityEvent myTestTrigger;
+    //health stuffs...
+    public float health = 2500;
 
-    void Start()
+    //event stuffs...
+    public static BossController current;
+    //[SerializeField] private UnityEvent myTestTrigger;
+
+    public void Awake()
     {
-        
+        current = this;
+    }
+
+    public event UnityAction onRoomTriggerEnter;
+
+    public void RoomTriggerEnter()
+    {
+        if(onRoomTriggerEnter != null)
+        {
+            onRoomTriggerEnter();
+        }
+       
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.P))
         {
-            myTestTrigger.Invoke();
+            RoomTriggerEnter();
             Debug.Log("Invoking Test Event!");
         }
     }
+
 }
