@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float health;
+    public float health = 100;
 
     void Start()
     {
@@ -25,6 +25,10 @@ public class EnemyHealth : MonoBehaviour
         if(collision.tag == "Fireball")
         {
             health -= 50;
+        }
+        if(collision.tag == "Sword")
+        {
+            health -= 100;
         }
     }
 }

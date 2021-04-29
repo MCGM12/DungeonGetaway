@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Tilemaps;
+
 
 
 public class BossController : MonoBehaviour
@@ -11,15 +11,15 @@ public class BossController : MonoBehaviour
     public float health = 2500;
 
     //event stuffs...
-    public static BossController current;
-    //[SerializeField] private UnityEvent myTestTrigger;
+    [SerializeField] public static BossController current;
+    
 
     public void Awake()
     {
         current = this;
     }
 
-    public event UnityAction onRoomTriggerEnter;
+    public event Action onRoomTriggerEnter;
 
     public void RoomTriggerEnter()
     {

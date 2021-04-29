@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
@@ -12,9 +12,7 @@ public class BossRoomStart : MonoBehaviour
 
     public void Awake()
     {
-        BO = BossController.current;
-        BO.onRoomTriggerEnter += OnDoorwayClose;
-       //GameObject.Find("BossTest").GetComponent<BossController>().current.onRoomTriggerEnter += OnDoorwayClose;
+        BossController.current.onRoomTriggerEnter += OnDoorwayClose;
     }
 
     public void OnDoorwayClose()
@@ -27,7 +25,7 @@ public class BossRoomStart : MonoBehaviour
 
     public bool detected = false;
 
-    public  void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
