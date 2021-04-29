@@ -9,6 +9,7 @@ TagManager:
   - MCAIPatrol
   - Fireball
   - triggerArea
+  - Sword
   layers:
   - Default
   - TransparentFX
