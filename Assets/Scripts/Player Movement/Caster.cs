@@ -29,7 +29,7 @@ public class Caster : MonoBehaviour
         GameObject fireball = Instantiate(FireBallPrefab, FirePoint.position, FirePoint.rotation);
         Rigidbody2D rb2d = fireball.GetComponent<Rigidbody2D>();
         rb2d.AddForce(FirePoint.up * FireballForce, ForceMode2D.Impulse);
-        FireAudio();
+        //FireAudio();
     }
 
 
