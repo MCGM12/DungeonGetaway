@@ -31,15 +31,14 @@ public class PlayerAttack : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
         }
         
-       
+      
   
     }
-    
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere (AttackPos.position, attackRange);
+        Gizmos.DrawWireSphere(AttackPos.position, attackRange);
     }
 
 
