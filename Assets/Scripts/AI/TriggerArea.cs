@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
-    public bool detected = false;
-
+    public bool bossDead;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
-            detected = true;
-            BossController.current.RoomTriggerEnter();
+            GameEvents.current.DoorwayTriggerEnter();
+        }
+    }
+    private void Update()
+    {
+        if(bossDead)
+        {
+            GameEvents.current.DoorwayTriggerExit();
         }
     }
 }
