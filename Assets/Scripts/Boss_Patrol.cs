@@ -29,7 +29,7 @@ public class Boss_Patrol : StateMachineBehaviour
         //p3 = GameObject.Find("BP3").GetComponent<Transform>(); p4 = GameObject.Find("BP4").GetComponent<Transform>();
         //p5 = GameObject.Find("BP5").GetComponent<Transform>(); p6 = GameObject.Find("BP6").GetComponent<Transform>();
         agent = animator.GetComponent<IAstarAI>();
-
+        targets = animator.GetComponent<PatrolHolder>().targets;
 
     }
 
