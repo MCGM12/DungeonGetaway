@@ -9,6 +9,7 @@ public class FireBall : MonoBehaviour
 
     void Start()
     {
+        damage = 25;
         Destroy(gameObject, 4f);
     }
 

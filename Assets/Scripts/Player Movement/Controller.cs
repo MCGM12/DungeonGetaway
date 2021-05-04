@@ -10,6 +10,8 @@ public class Controller : MonoBehaviour
    //public Camera viewCamera;
     Vector3 velocity;
 
+    public int health;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,5 +31,11 @@ public class Controller : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = velocity;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log("Player Lost health! Took " + damage + " damage.");
     }
 }

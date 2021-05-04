@@ -12,6 +12,8 @@ public class DashMovement : MonoBehaviour
 
     bool dash = false;
 
+    bool yes = false;
+
     bool mousePos = true;
 
   public  int dashCooldown = 80;
@@ -25,6 +27,7 @@ public class DashMovement : MonoBehaviour
         {
             dash = true;
             mousePos = true;
+            yes = false;
         }
         else
         {
@@ -41,16 +44,20 @@ public class DashMovement : MonoBehaviour
         {
             if(mousePos)
             {
+                Rgb2d.velocity = Vector2.zero;
                 mouseSpot = Input.mousePosition;
+                mouseSpot = Camera.main.ScreenToWorldPoint(mouseSpot);
                 mousePos = false;
             }
             
-            Rgb2d.velocity = Vector2.zero;
+            
             Vector2 mouseDirection = (Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2)).normalized;
 
             Rgb2d.AddForce(mouseDirection * dashSpeed * Time.deltaTime*2);
 
             //Rgb2d.MovePosition(Vector2.Lerp(mouseDirection, mouseSpot, dashSpeed * Time.deltaTime));
+            //this.transform.position = Vector2.Lerp(transform.position, mouseSpot, dashSpeed);//* Time.deltaTime);
+            //Rgb2d.MovePosition(Vector2.Lerp(transform.position, mouseSpot, dashSpeed * Time.deltaTime).normalized);
             dash = false;
             dashCooldown = 80;
         }
