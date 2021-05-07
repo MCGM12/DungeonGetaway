@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class DoorControllers : MonoBehaviour
 {
     public GameObject Extras;
+    [SerializeField] private Animator bossControls;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class DoorControllers : MonoBehaviour
     {
         Debug.Log("DOORWAY BEING CLOSED, PLAYER ENTERED");
         //Extras.SetActive(true);
+        bossControls.enabled = true;
         Extras.GetComponent<TilemapCollider2D>().enabled = true;
         Extras.GetComponent<TilemapRenderer>().enabled = true;
     }

@@ -52,7 +52,7 @@ public class BossController : MonoBehaviour
         //Destroy(gameObject);
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         animator.SetFloat("BossHealth", health -= damage);
         //health -= damage;
