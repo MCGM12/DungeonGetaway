@@ -1,23 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class BuffSystem : MonoBehaviour
+﻿
+public enum StatModType
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Flat,
+    Percent,
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    void IncreaseHealth()
-    {
 
+public class BuffSystem
+{
+
+
+    public readonly float Value;
+    public readonly StatModType Type;
+    public readonly int Order;
+    public BuffSystem(float value, StatModType type, int order)
+    {
+        Value = value;
+        Type = type;
+        Order = order;
     }
+    public BuffSystem(float value, StatModType type) : this(value, type, (int)type) { }
+
 }
