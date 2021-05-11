@@ -6,12 +6,6 @@ using Pathfinding;
 public class Boss_Patrol : StateMachineBehaviour
 {
 
-    //Transform p1;
-    //Transform p2;
-    //Transform p3;
-    //Transform p4;
-    //Transform p5;
-    //Transform p6;
     public Transform[] targets;
     public float delay = 0;
     int index;
@@ -23,11 +17,7 @@ public class Boss_Patrol : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //base.Awake();
-
-        //p1 = GameObject.Find("BP1").GetComponent<Transform>(); p2 = GameObject.Find("BP2").GetComponent<Transform>();
-        //p3 = GameObject.Find("BP3").GetComponent<Transform>(); p4 = GameObject.Find("BP4").GetComponent<Transform>();
-        //p5 = GameObject.Find("BP5").GetComponent<Transform>(); p6 = GameObject.Find("BP6").GetComponent<Transform>();
+        
         agent = animator.GetComponent<IAstarAI>();
         targets = animator.GetComponent<PatrolHolder>().targets;
 
@@ -45,6 +35,7 @@ public class Boss_Patrol : StateMachineBehaviour
         if (agent.reachedEndOfPath && !agent.pathPending && float.IsPositiveInfinity(switchTime))
         {
             switchTime = Time.time + delay;
+            FireBall();
         }
 
         if (Time.time >= switchTime)
@@ -58,6 +49,11 @@ public class Boss_Patrol : StateMachineBehaviour
         agent.destination = targets[index].position;
 
         if (search) agent.SearchPath();
+    }
+
+    public void FireBall()
+    {
+        Debug.Log("Shooting Player with a Fireball!");
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
