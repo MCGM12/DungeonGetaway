@@ -624,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7617d0631a9b714382349b8984f65f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PIRM: 0
 --- !u!1102 &7385872456135367251
 AnimatorState:
   serializedVersion: 5
@@ -686,4 +687,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  delay: 0.25
+  delay: 0.75
