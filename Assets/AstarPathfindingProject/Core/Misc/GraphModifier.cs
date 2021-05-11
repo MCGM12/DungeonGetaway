@@ -11,7 +11,8 @@ namespace Pathfinding {
 	/// See: Application.IsPlaying
 	/// </summary>
 	[ExecuteInEditMode]
-	public abstract class GraphModifier : VersionedMonoBehaviour {
+	public abstract class GraphModifier : VersionedMonoBehaviour
+    {
 		/// <summary>All active graph modifiers</summary>
 		private static GraphModifier root;
 

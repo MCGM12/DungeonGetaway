@@ -76,7 +76,7 @@ namespace Pathfinding {
 				PropertyField("constrainInsideGraph");
 			}
 
-			var mono = target as MonoBehaviour;
+			var mono = target as UnityEngine.MonoBehaviour;
 			var rigid = mono.GetComponent<Rigidbody>();
 			var rigid2D = mono.GetComponent<Rigidbody2D>();
 			var controller = mono.GetComponent<CharacterController>();

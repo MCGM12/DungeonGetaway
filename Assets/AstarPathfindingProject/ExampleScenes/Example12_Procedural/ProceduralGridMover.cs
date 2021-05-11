@@ -36,7 +36,7 @@ namespace Pathfinding {
 	/// Version: After 3.6.8 this class can also handle layered grid graphs.
 	/// </summary>
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_procedural_grid_mover.php")]
-	public class ProceduralGridMover : VersionedMonoBehaviour {
+	public class ProceduralGridMover : MonoBehaviour {
 		/// <summary>
 		/// Graph will be updated if the target is more than this number of nodes from the graph center.
 		/// Note that this is in nodes, not world units.

@@ -54,7 +54,7 @@ namespace Pathfinding {
 	/// See: Menubar -> Component -> Pathfinding -> Modifiers
 	/// </summary>
 	[System.Serializable]
-	public abstract class MonoModifier : VersionedMonoBehaviour, IPathModifier {
+	public abstract class MonoModifier : MonoBehaviour, IPathModifier {
 		[System.NonSerialized]
 		public Seeker seeker;
 

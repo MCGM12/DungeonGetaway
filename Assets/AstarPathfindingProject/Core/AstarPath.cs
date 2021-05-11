@@ -24,7 +24,8 @@ using Thread = System.Threading.Thread;
 /// \ingroup relevant
 /// </summary>
 [HelpURL("http://arongranberg.com/astar/docs/class_astar_path.php")]
-public class AstarPath : VersionedMonoBehaviour {
+public class AstarPath : VersionedMonoBehaviour
+{
 	/// <summary>The version number for the A* %Pathfinding Project</summary>
 	public static readonly System.Version Version = new System.Version(4, 2, 15);
 

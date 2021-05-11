@@ -16,7 +16,7 @@ namespace Pathfinding {
 	/// See: turnbased (view in online documentation for working links)
 	/// </summary>
 	[HelpURL("http://arongranberg.com/astar/docs/class_pathfinding_1_1_single_node_blocker.php")]
-	public class SingleNodeBlocker : VersionedMonoBehaviour {
+	public class SingleNodeBlocker : MonoBehaviour {
 		public GraphNode lastBlocked { get; private set; }
 		public BlockManager manager;
 

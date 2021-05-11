@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Pathfinding {
 	/// <summary>Helper for creating editors</summary>
-	[CustomEditor(typeof(VersionedMonoBehaviour), true)]
+	[CustomEditor(typeof(MonoBehaviour), true)]
 	[CanEditMultipleObjects]
 	public class EditorBase : Editor {
 		static System.Collections.Generic.Dictionary<string, string> cachedTooltips;
@@ -96,14 +96,14 @@ namespace Pathfinding {
 				Debug.LogException(e, target);
 			}
 			serializedObject.ApplyModifiedProperties();
-			if (targets.Length == 1 && (target as MonoBehaviour).enabled) {
+			if (targets.Length == 1 && (target as UnityEngine.MonoBehaviour).enabled) {
 				var attr = target.GetType().GetCustomAttributes(typeof(UniqueComponentAttribute), true);
 				for (int i = 0; i < attr.Length; i++) {
 					string tag = (attr[i] as UniqueComponentAttribute).tag;
-					foreach (var other in (target as MonoBehaviour).GetComponents<MonoBehaviour>()) {
+					foreach (var other in (target as UnityEngine.MonoBehaviour).GetComponents<UnityEngine.MonoBehaviour>()) {
 						if (!other.enabled || other == target) continue;
 						if (other.GetType().GetCustomAttributes(typeof(UniqueComponentAttribute), true).Select(c => (c as UniqueComponentAttribute).tag == tag).Any()) {
-							EditorGUILayout.HelpBox("This component and " + other.GetType().Name + " cannot be used at the same time", MessageType.Warning);
+                            EditorGUILayout.HelpBox("This component and " + other.GetType().Name + " cannot be used at the same time", MessageType.Warning);
 						}
 					}
 				}

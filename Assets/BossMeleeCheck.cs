@@ -4,21 +4,37 @@ using UnityEngine;
 
 public class BossMeleeCheck : StateMachineBehaviour
 {
-    public bool PIRM;
+    //public bool PIRM = false;
+    Transform p;
+    Transform b;
+    public float dist;
+    BossMelee bm;
 
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        bm = GameObject.Find("BossTest").GetComponent<BossMelee>();
+        bm.enabled = true;
+        Debug.Log("Found boss melee script");
     }
 
-    
-
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        b = GameObject.Find("BossTest").transform;
+        p = GameObject.Find("Player").transform;
 
+
+        if (Vector2.Distance(p.position, b.position) <= dist)
+        {
+            bm.PIRM = true;
+        } else
+        {
+            bm.PIRM = false;
+        }
     }
 
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        bm.enabled = false;
+    }
 
 }

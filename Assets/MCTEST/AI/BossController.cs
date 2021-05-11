@@ -10,6 +10,7 @@ public class BossController : MonoBehaviour
     //health stuffs...
     public float health = 25;
     public Animator animator;
+    public bool dead;
 
 
     //Animator m_Animator;
@@ -46,10 +47,15 @@ public class BossController : MonoBehaviour
 
     void BossDead()
     {
-        //Stuff to open the doors, big WOO YOU WON
-        GameEvents.current.DoorwayTriggerExit();
-        Debug.Log("Boss Defeated! Great Job!");
-        //Destroy(gameObject);
+        if(!dead)
+        {
+            //Stuff to open the doors, big WOO YOU WON
+            GameEvents.current.DoorwayTriggerExit();
+            Debug.Log("Boss Defeated! Great Job!");
+            //Destroy(gameObject);
+            dead = true;
+        }
+
     }
 
     public void TakeDamage(int damage)
