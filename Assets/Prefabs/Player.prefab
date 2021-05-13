@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 6887135373063945936}
   - component: {fileID: 6887135373063945937}
   - component: {fileID: 6887135373063945938}
+  - component: {fileID: -9125898803243818243}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
+  health: 0
 --- !u!50 &6887135373063945936
 Rigidbody2D:
   serializedVersion: 4
@@ -480,6 +482,24 @@ MonoBehaviour:
   Rgb2d: {fileID: 6887135373063945936}
   dashSpeed: 500000
   dashCooldown: 80
+--- !u!114 &-9125898803243818243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887135373063945947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31d270ff6880b6439530565fd324870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Attack:
+    BaseValue: 0
+  Speed:
+    BaseValue: 0
+  Health:
+    BaseValue: 0
 --- !u!1 &6887135373290561541
 GameObject:
   m_ObjectHideFlags: 0
