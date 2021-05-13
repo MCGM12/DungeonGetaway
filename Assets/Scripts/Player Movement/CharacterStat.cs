@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+[Serializable]
 public class CharacterStat {
 
     public float BaseValue;
-    public float Value
+    public virtual float Value
     {
         get
         {
-            if (isDirty)
+            if (isDirty || BaseValue != lastBaseValue )
             {
+                lastBaseValue = BaseValue;
                 _value = CalculateFinalValue();
                 isDirty = false;
             }
@@ -16,26 +20,35 @@ public class CharacterStat {
         }
     }
 
-    private bool isDirty = true;
-    private float _value;
+    protected  bool isDirty = true;
+    protected  float _value;
+    protected  float lastBaseValue = float.MinValue;
 
-    private readonly List<BuffSystem> buffSystems;
+    protected  readonly List<BuffSystem> buffSystems;
+    public readonly ReadOnlyCollection<BuffSystem> BuffSystems;
 
-   
-    public CharacterStat(float baseValue)
+
+    public CharacterStat()
+    {
+        buffSystems = new List<BuffSystem>();
+
+        BuffSystems = buffSystems.AsReadOnly();
+    }
+
+    public CharacterStat(float baseValue) : this()
     {
         BaseValue = baseValue;
-        buffSystems = new List<BuffSystem>();
+      
     }
 
 
-    public void AddStats(BuffSystem mod)
+    public virtual void AddStats(BuffSystem mod)
     {
         isDirty = true;
         buffSystems.Add(mod);
         buffSystems.Sort(CompareModifierOrder);
     }
-    private int CompareModifierOrder(BuffSystem a, BuffSystem b)
+    protected virtual int CompareModifierOrder(BuffSystem a, BuffSystem b)
     {
         if (a.Order < b.Order)
             return -1;
@@ -43,16 +56,35 @@ public class CharacterStat {
             return 1;
         return 0 ;// if (a.order == b.order)
     }
-    public bool RemoveStats(BuffSystem mod)
+    public virtual bool RemoveStats(BuffSystem mod)
     {
-        isDirty = true;
-        return buffSystems.Remove(mod);
+      if (buffSystems.Remove(mod))
+        {
+            isDirty = true;
+            return true;
+        }
+        return false;
     }
 
+    public virtual bool RemoveAllModifersFromSource(object source)
+    {
+        bool didRemove = false;
+         for (int i = buffSystems.Count - 1; i>=0; i--)
+        {
+            if (buffSystems[i].Source == source)
+            {
+                isDirty = true;
+                didRemove = true;
+                buffSystems.RemoveAt(i);
+            }
+        }
+        return didRemove;
+    }
 
-    private float CalculateFinalValue()
+    protected virtual float CalculateFinalValue()
     {
         float finalValue = BaseValue;
+        float sumPercentAdd = 0;
 
         for (int i=0; i< buffSystems.Count; i++)
         {
@@ -60,7 +92,21 @@ public class CharacterStat {
             if (mod.Type == StatModType.Flat)
             {
                 finalValue += mod.Value;
-            }else if (mod.Type== StatModType.Percent)
+            }else if (mod.Type== StatModType.PercentAdd)
+            {
+
+                sumPercentAdd += mod.Value;
+
+                if (i +1 >= buffSystems.Count || buffSystems[i+1].Type != StatModType.PercentAdd) 
+                {
+
+                    finalValue *= 1 + sumPercentAdd;
+                    sumPercentAdd = 0;
+                
+                }
+            
+            }
+            else if (mod.Type== StatModType.PercentMult)
             {
                 finalValue *= 1 + mod.Value;            }
         }
