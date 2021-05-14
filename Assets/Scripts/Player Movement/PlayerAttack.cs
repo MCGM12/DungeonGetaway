@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    PlayerStats characterStat;
+
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
+    
+    
     public Transform AttackPos;
     public LayerMask whatIsEnemies;
     public float attackRange;
     public int damage;
+
+
+     void Start()
+    {
+        characterStat = GetComponent<PlayerStats>();
+    }
+
+
+
+
     void Update()
     {
         if (timeBtwAttack <= 0)
@@ -38,6 +52,14 @@ public class PlayerAttack : MonoBehaviour
       
   
     }
+
+    public void Attack( PlayerStats targetStats)
+    {
+        
+    }
+
+
+
 
     void OnDrawGizmosSelected()
     {
