@@ -32,7 +32,7 @@ public class BossMelee : MonoBehaviour
                 for (int i = 0; i < playerToDamage.Length; i++)
                 {
                     Debug.Log("Found Player, Attacking him now!");
-                    playerToDamage[i].GetComponent<Controller>().TakeDamage(damage); //player takes damage
+                    playerToDamage[i].GetComponent<PlayerStats>().TakeDamage(damage); //player takes damage
                 }
             }
             timeBtwAttack = startTimeBtwAttack;

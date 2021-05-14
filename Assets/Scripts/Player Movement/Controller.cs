@@ -9,9 +9,8 @@ public class Controller : MonoBehaviour
     private Rigidbody2D rb;
    //public Camera viewCamera;
     Vector3 velocity;
-
-    public int health;
-
+    PlayerStats Speed;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,9 +32,5 @@ public class Controller : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-        Debug.Log("Player Lost health! Took " + damage + " damage.");
-    }
+   
 }

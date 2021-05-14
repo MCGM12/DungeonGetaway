@@ -806,7 +806,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -9125898803243818243, guid: 901c686fae36b7d49a9cb7cc4f3af99f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 901c686fae36b7d49a9cb7cc4f3af99f, type: 3}
 --- !u!1 &6887135373430533773 stripped
 GameObject:
@@ -826,6 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31d270ff6880b6439530565fd324870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   Attack:
     BaseValue: 10
   Speed:
