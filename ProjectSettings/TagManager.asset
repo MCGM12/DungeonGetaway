@@ -11,6 +11,7 @@ TagManager:
   - triggerArea
   - Sword
   - BossPatrol
+  - teleporter
   layers:
   - Default
   - TransparentFX
