@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Pathfinding {
 	/// <summary>Helper for creating editors</summary>
-	[CustomEditor(typeof(MonoBehaviour), true)]
+	[CustomEditor(typeof(VersionedMonoBehaviour), true)]
 	[CanEditMultipleObjects]
 	public class EditorBase : Editor {
 		static System.Collections.Generic.Dictionary<string, string> cachedTooltips;
