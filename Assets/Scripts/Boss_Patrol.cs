@@ -7,10 +7,12 @@ public class Boss_Patrol : StateMachineBehaviour
 {
 
     public Transform[] targets;
+    public Transform cT;
     public float delay = 0;
     int index;
     IAstarAI agent;
     float switchTime = float.PositiveInfinity;
+    public static Transform sct;
 
 
 
@@ -28,6 +30,7 @@ public class Boss_Patrol : StateMachineBehaviour
     {
         if (targets.Length == 0) return;
 
+        
         bool search = false;
 
         // Note: using reachedEndOfPath and pathPending instead of reachedDestination here because
@@ -35,7 +38,7 @@ public class Boss_Patrol : StateMachineBehaviour
         if (agent.reachedEndOfPath && !agent.pathPending && float.IsPositiveInfinity(switchTime))
         {
             switchTime = Time.time + delay;
-            FireBall();
+            FireBall(animator, stateInfo, layerIndex);
         }
 
         if (Time.time >= switchTime)
@@ -47,19 +50,22 @@ public class Boss_Patrol : StateMachineBehaviour
 
         index = index % targets.Length;
         agent.destination = targets[index].position;
+        cT = targets[index];
+        sct = cT;
 
         if (search) agent.SearchPath();
     }
 
-    public void FireBall()
+    public void FireBall(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Shooting Player with a Fireball!");
+        animator.SetBool("FireballAttack", true); Debug.Log("Boss preparing to launch fireball!");
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        Debug.Log("Static is currently: " + sct);
     }
 
 
