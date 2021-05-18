@@ -84,7 +84,8 @@ namespace Pathfinding {
 		}
 
 		protected virtual void OnEnable () {
-			foreach (var target in targets) if (target != null) (target as IVersionedMonoBehaviourInternal).UpgradeFromUnityThread();
+
+            //foreach (var target in targets) if (target != null) (target as IVersionedMonoBehaviourInternal).UpgradeFromUnityThread();
 		}
 
 		public sealed override void OnInspectorGUI () {
