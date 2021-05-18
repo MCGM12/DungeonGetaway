@@ -19,6 +19,11 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = new Vector3(transform.position.x,transform.position.y,-2);
+        }
 
         velocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * moveSpeed;
 

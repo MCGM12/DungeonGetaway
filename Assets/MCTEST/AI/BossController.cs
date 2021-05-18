@@ -59,7 +59,7 @@ public class BossController : MonoBehaviour
             //Stuff to open the doors, big WOO YOU WON
             GameEvents.current.DoorwayTriggerExit();
             Debug.Log("Boss Defeated! Great Job!");
-            //Destroy(gameObject);
+            Destroy(gameObject);
             dead = true;
         }
 

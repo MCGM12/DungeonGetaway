@@ -12,6 +12,7 @@ TagManager:
   - Sword
   - BossPatrol
   - teleporter
+  - bossFireball
   layers:
   - Default
   - TransparentFX

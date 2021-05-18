@@ -22,6 +22,7 @@ public class Boss_Patrol : StateMachineBehaviour
         
         agent = animator.GetComponent<IAstarAI>();
         targets = animator.GetComponent<PatrolHolder>().targets;
+        agent.destination = sct.position;
 
     }
 
