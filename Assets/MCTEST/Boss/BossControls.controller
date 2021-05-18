@@ -95,7 +95,6 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 6434683164486783457}
   - {fileID: 7911788644978855671}
-  - {fileID: 6009653120755288806}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -104,7 +103,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 402924d3dffc288409183e1155958d18, type: 2}
   m_Tag: 
   m_SpeedParameter: BossHealth
   m_MirrorParameter: 
@@ -229,7 +228,7 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: BossHealth
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 2000
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
@@ -364,7 +363,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 6ba4c93c0f6066c46b1e02af76da156c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -434,9 +433,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: PIRM
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: PlayerChase
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2070278920820818090}
   m_Solo: 0
@@ -463,20 +459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6e5581cff20fa4a8a20fab49f6cf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6009653120755288806
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7097d8a830721314780cfc2d38f140f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  player: {fileID: 0}
 --- !u!114 &6434683164486783457
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -502,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7617d0631a9b714382349b8984f65f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dist: 0
+  dist: 3
 --- !u!1102 &7385872456135367251
 AnimatorState:
   serializedVersion: 5
@@ -545,7 +527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7097d8a830721314780cfc2d38f140f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   player: {fileID: 0}
 --- !u!114 &7911788644978855671
 MonoBehaviour:

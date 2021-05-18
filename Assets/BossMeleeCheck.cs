@@ -14,7 +14,7 @@ public class BossMeleeCheck : StateMachineBehaviour
     {
         bm = GameObject.Find("BossTest").GetComponent<BossMelee>();
         bm.enabled = true;
-        Debug.Log("Found boss melee script");
+        //Debug.Log("Found boss melee script");
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -26,8 +26,13 @@ public class BossMeleeCheck : StateMachineBehaviour
         if (Vector2.Distance(p.position, b.position) <= dist)
         {
             bm.PIRM = true;
+            animator.SetBool("PIRM", true); 
         } else
         {
+            if(bm.startTimeBtwAttack >= 0)
+            {
+                animator.SetBool("PIRM", false);
+            }
             bm.PIRM = false;
         }
     }

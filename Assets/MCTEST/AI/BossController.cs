@@ -12,6 +12,8 @@ public class BossController : MonoBehaviour
     public Animator animator;
     public bool dead;
 
+    public Transform targetTransform;
+    public float speed;
 
     //Animator m_Animator;
     //string m_ClipName;
@@ -20,20 +22,25 @@ public class BossController : MonoBehaviour
 
     private void Start()
     {
+        targetTransform = GameObject.Find("Player").transform;
         animator = GetComponent<Animator>();
-        ////health = animator.GetFloat("BossHealth");
-        //m_Animator = gameObject.GetComponent<Animator>();
-        ////Fetch the current Animation clip information for the base layer
-        //m_CurrentClipInfo = this.m_Animator.GetCurrentAnimatorClipInfo(0);
-        ////Access the current length of the clip
-        //m_CurrentClipLength = m_CurrentClipInfo[0].clip.length;
-        ////Access the Animation clip name
-        //m_ClipName = m_CurrentClipInfo[0].clip.name;
+        
 
     }
 
     void Update()
     {
+        //Vector3 vectorToTarget = targetTransform.position - transform.position;
+        //float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        //Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
+        //var offset = 90f;
+        //Vector2 direction = targetTransform.position - transform.position;
+        //direction.Normalize();
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+
+
         if (animator.GetFloat("BossHealth") >= 25) health = animator.GetFloat("BossHealth"); else if (animator.GetFloat("BossHealth") < 0) BossDead();
         if (Input.GetKeyDown(KeyCode.P))
         {
