@@ -751,6 +751,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.048
       objectReference: {fileID: 0}
+    - target: {fileID: 6887135371926655001, guid: 901c686fae36b7d49a9cb7cc4f3af99f,
+        type: 3}
+      propertyPath: PlayerAnim
+      value: 
+      objectReference: {fileID: 6887135373430533781}
     - target: {fileID: 6887135371926655007, guid: 901c686fae36b7d49a9cb7cc4f3af99f,
         type: 3}
       propertyPath: m_LocalPosition.y
