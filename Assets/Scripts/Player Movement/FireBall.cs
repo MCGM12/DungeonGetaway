@@ -27,5 +27,9 @@ public class FireBall : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (tag == "bossFireball" && collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerStats>().TakeDamage(damage);
+        }
     }
 }

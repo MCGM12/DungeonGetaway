@@ -17,9 +17,11 @@ public class BossControlls : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //animator.transform.forward = Vector2.up;
+
         Vector2 direction = player.position - animator.transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        Quaternion rotation = Quaternion.AngleAxis(angle - 90 , Vector3.forward);
         rotation.x = player.rotation.x;
         rotation.y = player.rotation.y;
         animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, rotation, speed * Time.deltaTime);
