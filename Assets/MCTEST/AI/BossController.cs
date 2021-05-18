@@ -34,11 +34,11 @@ public class BossController : MonoBehaviour
         //float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
         //Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         //transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
-        var offset = 90f;
-        Vector2 direction = targetTransform.position - transform.position;
-        direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
+        //var offset = 90f;
+        //Vector2 direction = targetTransform.position - transform.position;
+        //direction.Normalize();
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
 
 
         if (animator.GetFloat("BossHealth") >= 25) health = animator.GetFloat("BossHealth"); else if (animator.GetFloat("BossHealth") < 0) BossDead();
