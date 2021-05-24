@@ -192,10 +192,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_0
       rect:
         serializedVersion: 2
-        x: 566
-        y: 234
-        width: 141
-        height: 136
+        x: 787
+        y: 325
+        width: 195
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_1
       rect:
         serializedVersion: 2
-        x: 743
-        y: 228
-        width: 141
-        height: 133
+        x: 1032
+        y: 318
+        width: 195
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_2
       rect:
         serializedVersion: 2
-        x: 922
-        y: 231
-        width: 141
-        height: 131
+        x: 1281
+        y: 321
+        width: 195
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_3
       rect:
         serializedVersion: 2
-        x: 1092
-        y: 227
-        width: 142
-        height: 136
+        x: 1518
+        y: 316
+        width: 195
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_4
       rect:
         serializedVersion: 2
-        x: 1272
-        y: 223
-        width: 141
-        height: 136
+        x: 1767
+        y: 311
+        width: 195
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 55
-        width: 142
-        height: 139
+        x: 90
+        y: 77
+        width: 195
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_6
       rect:
         serializedVersion: 2
-        x: 234
-        y: 56
-        width: 141
-        height: 140
+        x: 325
+        y: 78
+        width: 195
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_7
       rect:
         serializedVersion: 2
-        x: 397
-        y: 50
-        width: 141
-        height: 139
+        x: 552
+        y: 70
+        width: 195
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,10 +360,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_8
       rect:
         serializedVersion: 2
-        x: 573
-        y: 51
-        width: 141
-        height: 136
+        x: 796
+        y: 72
+        width: 195
+        height: 187
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_9
       rect:
         serializedVersion: 2
-        x: 750
-        y: 50
-        width: 141
-        height: 131
+        x: 1042
+        y: 70
+        width: 195
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,10 +402,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_10
       rect:
         serializedVersion: 2
-        x: 923
-        y: 45
-        width: 142
-        height: 133
+        x: 1283
+        y: 63
+        width: 195
+        height: 183
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_11
       rect:
         serializedVersion: 2
-        x: 1098
-        y: 40
-        width: 141
-        height: 136
+        x: 1525
+        y: 56
+        width: 195
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,10 +444,10 @@ TextureImporter:
       name: enemy_walk_sprite_sheet_12
       rect:
         serializedVersion: 2
-        x: 1270
-        y: 36
-        width: 141
-        height: 139
+        x: 1764
+        y: 50
+        width: 195
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
