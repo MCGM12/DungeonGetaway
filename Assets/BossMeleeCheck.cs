@@ -32,14 +32,15 @@ public class BossMeleeCheck : StateMachineBehaviour
             if(bm.startTimeBtwAttack >= 0)
             {
                 animator.SetBool("PIRM", false);
+                bm.PIRM = false;
             }
-            bm.PIRM = false;
+            
         }
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        bm.enabled = false;
+        //bm.enabled = false;
     }
 
 }
