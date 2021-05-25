@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 78a720da3649f5145b777394083be04f
-=======
-<<<<<<< HEAD
-guid: 4ceca368309fbea44a96426028b8ca5c
-=======
-<<<<<<< HEAD
-guid: 78a720da3649f5145b777394083be04f
-=======
-guid: 4ceca368309fbea44a96426028b8ca5c
->>>>>>> main
->>>>>>> main
->>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -32,7 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -44,7 +32,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -100
     wrapU: 1
     wrapV: 1
