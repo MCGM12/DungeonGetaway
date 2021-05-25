@@ -11,6 +11,7 @@ public class FireBall : MonoBehaviour
     {
         damage = 25;
         Destroy(gameObject, 4f);
+        Debug.Log("Fireball shot");
     }
 
     
@@ -23,10 +24,14 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "enemy")
+        if(this.tag == "Fireball")
         {
-            Destroy(gameObject);
+            if (collision.tag == "enemy")
+            {
+                Destroy(gameObject);
+            }
         }
+
         if (tag == "bossFireball" && collision.tag == "Player")
         {
             collision.GetComponent<PlayerStats>().TakeDamage(damage);

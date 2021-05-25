@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
 
 
-     void Start()
+    void Start()
     {
         characterStat = GetComponent<PlayerStats>();
     }
@@ -37,10 +37,17 @@ public class PlayerAttack : MonoBehaviour
 
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    enemiesToDamage[i].GetComponent<EnemyHealth>().health -= damage;
-                    if(GetComponent<BossController>())
+                    //if(GetComponent<EnemyHealth>() != null)
+                    //{
+                        enemiesToDamage[i].GetComponent<EnemyHealth>().health -= damage; enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage);
+
+                    //}
+
+
+                    if (GetComponent<BossController>() != null)
                     {
-                        enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage); Debug.Log("Boss Taking Sword Damage!");
+                        enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage);
+                        Debug.Log("Boss Taking Sword Damage!");
                     }
                 }
             }

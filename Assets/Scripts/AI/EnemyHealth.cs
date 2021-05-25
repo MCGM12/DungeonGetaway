@@ -28,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if(collision.tag == "Sword")
         {
+            Debug.Log("Basic Enemy Taking Sword Damage");
             health -= 100;
         }
     }

@@ -59,14 +59,14 @@ public class Boss_Patrol : StateMachineBehaviour
 
     public void FireBall(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("FireballAttack", true); Debug.Log("Boss preparing to launch fireball!");
+        animator.SetBool("FireballAttack", true); //Debug.Log("Boss preparing to launch fireball!");
         
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("Static is currently: " + sct);
+        //Debug.Log("Static is currently: " + sct);
     }
 
 
