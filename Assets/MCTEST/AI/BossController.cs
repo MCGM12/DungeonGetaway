@@ -67,7 +67,8 @@ public class BossController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        animator.SetFloat("BossHealth", health -= damage);
+        Debug.Log("Boss taking damage");
+        animator.SetFloat("BossHealth", health - damage);
         //health -= damage;
         health = animator.GetFloat("BossHealth");
     }

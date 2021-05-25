@@ -29,6 +29,7 @@ public class BossFireball : StateMachineBehaviour
         rb2d.AddForce(c.up * FireballForce, ForceMode2D.Impulse);
         //stuff happens
         c.GetComponent<Animator>().SetBool("FireballAttack", false);
+        Debug.Log("Boss Shooting Fireball");
     }
 
 }

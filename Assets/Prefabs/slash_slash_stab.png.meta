@@ -62,6 +62,36 @@ TextureImporter:
   - first:
       213: 7078809090573800967
     second: slash_slash_stab_19
+  - first:
+      213: -4884874704291096345
+    second: slash_slash_stab_20
+  - first:
+      213: -3997037581298633333
+    second: slash_slash_stab_7
+  - first:
+      213: -2584328546214166927
+    second: slash_slash_stab_8
+  - first:
+      213: -8397429781456310907
+    second: slash_slash_stab_9
+  - first:
+      213: -6484097073122261467
+    second: slash_slash_stab_10
+  - first:
+      213: 1571347711913782935
+    second: slash_slash_stab_13
+  - first:
+      213: -689415669926989987
+    second: slash_slash_stab_14
+  - first:
+      213: 7927213798673609228
+    second: slash_slash_stab_15
+  - first:
+      213: 4669852739685816527
+    second: slash_slash_stab_16
+  - first:
+      213: -1867297263073894918
+    second: slash_slash_stab_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,7 +121,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -155,6 +185,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -162,12 +204,12 @@ TextureImporter:
       name: slash_slash_stab_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 1133
-        width: 201
-        height: 347
+        x: 65
+        y: 850
+        width: 151
+        height: 260
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +225,12 @@ TextureImporter:
       name: slash_slash_stab_1
       rect:
         serializedVersion: 2
-        x: 367
-        y: 1147
-        width: 176
-        height: 333
+        x: 275
+        y: 860
+        width: 132
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,12 +246,12 @@ TextureImporter:
       name: slash_slash_stab_2
       rect:
         serializedVersion: 2
-        x: 628
-        y: 1156
-        width: 170
-        height: 317
+        x: 473
+        y: 866
+        width: 128
+        height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +267,12 @@ TextureImporter:
       name: slash_slash_stab_3
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1153
-        width: 171
-        height: 315
+        x: 674
+        y: 864
+        width: 129
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,12 +288,12 @@ TextureImporter:
       name: slash_slash_stab_4
       rect:
         serializedVersion: 2
-        x: 1173
-        y: 1151
-        width: 174
-        height: 307
+        x: 879
+        y: 862
+        width: 131
+        height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,12 +309,12 @@ TextureImporter:
       name: slash_slash_stab_5
       rect:
         serializedVersion: 2
-        x: 1456
-        y: 1136
-        width: 171
-        height: 315
+        x: 1092
+        y: 851
+        width: 129
+        height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,12 +330,12 @@ TextureImporter:
       name: slash_slash_stab_6
       rect:
         serializedVersion: 2
-        x: 1749
-        y: 1142
-        width: 170
-        height: 317
+        x: 1311
+        y: 856
+        width: 128
+        height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,99 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash_slash_stab_7
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 728
-        width: 201
-        height: 347
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7764b89e154535b80800000000000000
-      internalID: -8407283368583281033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_8
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 744
-        width: 328
-        height: 331
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d55679e4a3fc36bb0800000000000000
-      internalID: -4943880116589075107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_9
-      rect:
-        serializedVersion: 2
-        x: 603
-        y: 748
-        width: 345
-        height: 310
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2418378facd021a10800000000000000
-      internalID: 1878579159969792322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_10
-      rect:
-        serializedVersion: 2
-        x: 941
-        y: 712
-        width: 348
-        height: 298
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02d3a8e50193dbc40800000000000000
-      internalID: 5529638659949215008
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: slash_slash_stab_11
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 687
-        width: 344
-        height: 293
+        x: 969
+        y: 515
+        width: 259
+        height: 220
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,12 +372,12 @@ TextureImporter:
       name: slash_slash_stab_12
       rect:
         serializedVersion: 2
-        x: 1648
-        y: 671
-        width: 318
-        height: 312
+        x: 1236
+        y: 503
+        width: 239
+        height: 234
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,120 +390,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slash_slash_stab_13
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 273
-        width: 310
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64077543de9ab9f10800000000000000
-      internalID: 2277600872816406598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_14
-      rect:
-        serializedVersion: 2
-        x: 319
-        y: 270
-        width: 271
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 082632293e0d30ca0800000000000000
-      internalID: -6051763798427868544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_15
-      rect:
-        serializedVersion: 2
-        x: 637
-        y: 286
-        width: 233
-        height: 278
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 665c88e087ae74ad0800000000000000
-      internalID: -2717946048733985434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_16
-      rect:
-        serializedVersion: 2
-        x: 940
-        y: 285
-        width: 209
-        height: 265
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39c127f1539f9a790800000000000000
-      internalID: -7518204096362177389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slash_slash_stab_17
-      rect:
-        serializedVersion: 2
-        x: 1222
-        y: 244
-        width: 186
-        height: 301
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20966b4eb8c261cf0800000000000000
-      internalID: -281988947314841342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: slash_slash_stab_18
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 197
-        width: 191
-        height: 348
+        x: 1125
+        y: 147
+        width: 144
+        height: 262
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -561,12 +414,12 @@ TextureImporter:
       name: slash_slash_stab_19
       rect:
         serializedVersion: 2
-        x: 1752
-        y: 140
-        width: 175
-        height: 389
+        x: 1314
+        y: 105
+        width: 132
+        height: 292
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -574,6 +427,195 @@ TextureImporter:
       bones: []
       spriteID: 706157cdc5bfc3260800000000000000
       internalID: 7078809090573800967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_7
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 546
+        width: 151
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85fecc3f7ba788c0800000000000000
+      internalID: -3997037581298633333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_8
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 558
+        width: 247
+        height: 248
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17eb00c21ee922cd0800000000000000
+      internalID: -2584328546214166927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 561
+        width: 259
+        height: 232
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58da202fa16567b80800000000000000
+      internalID: -8397429781456310907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_10
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 534
+        width: 261
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 526c563f01cd306a0800000000000000
+      internalID: -6484097073122261467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_13
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 205
+        width: 233
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e6e3b2b6c8ec510800000000000000
+      internalID: 1571347711913782935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_14
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 202
+        width: 204
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fe963d914be66f0800000000000000
+      internalID: -689415669926989987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_15
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 214
+        width: 176
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02f38023fe130e60800000000000000
+      internalID: 7927213798673609228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_16
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 213
+        width: 157
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc89b562356aec040800000000000000
+      internalID: 4669852739685816527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slash_slash_stab_17
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 183
+        width: 140
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afddb6858070616e0800000000000000
+      internalID: -1867297263073894918
       vertices: []
       indices: 
       edges: []

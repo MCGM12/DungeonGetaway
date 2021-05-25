@@ -12,7 +12,7 @@ public class DashMovement : MonoBehaviour
 
     bool dash = false;
 
-    bool yes = false;
+    //bool yes = false;
 
     bool mousePos = true;
 
@@ -27,7 +27,7 @@ public class DashMovement : MonoBehaviour
         {
             dash = true;
             mousePos = true;
-            yes = false;
+           // yes = false;
         }
         else
         {
