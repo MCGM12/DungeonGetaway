@@ -14,6 +14,7 @@ public class AIControl : MonoBehaviour
     GameObject enemy, player;
 
     public bool playerSpotted;
+    public bool PIRM;
 
     void Start()
     {
@@ -33,6 +34,8 @@ public class AIControl : MonoBehaviour
     {
         playerSpotted = fov.spotted;
         dest.target = player.transform;
+        PIRM = Vector2.Distance(transform.position, player.transform.position) < 2;
+        GetComponent<BossMelee>().PIRM = PIRM;
         if (playerSpotted)
         {
             patrol.enabled = false;

@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 3086361986175855312}
   - component: {fileID: 5785211085726022392}
   - component: {fileID: 6015229050974761806}
+  - component: {fileID: 4749023901575690242}
   m_Layer: 9
   m_Name: MeleeHunter
   m_TagString: enemy
@@ -107,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7950712878193827092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.28, y: 6.56, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9071260560060216029}
@@ -174,7 +175,7 @@ Animator:
   m_GameObject: {fileID: 7950712878193827092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 985663bcb9d3a2448985ee0491c42542, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -337,6 +338,7 @@ MonoBehaviour:
   fov: {fileID: 0}
   dest: {fileID: 0}
   playerSpotted: 0
+  PIRM: 0
 --- !u!114 &3086361986175855312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,3 +390,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+--- !u!114 &4749023901575690242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7950712878193827092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f6889dc7689f64baa970fe16cf8c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwAttack: 3
+  attackPos: {fileID: 7950712878193827089}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackRangeX: 2
+  attackRangeY: 3
+  damage: 0
+  PIRM: 0
