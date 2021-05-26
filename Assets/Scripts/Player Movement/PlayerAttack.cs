@@ -9,6 +9,9 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     public Animator PlayerAnim;
+    public Animator bossAnim;
+    float currentBHP;
+    bool aR;
     
     
     public Transform AttackPos;
@@ -19,31 +22,31 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
+        aR = true;
         characterStat = GetComponent<PlayerStats>();
     }
 
-
-
-
     void Update()
     {
+        currentBHP = bossAnim.GetFloat("BossHealth");
         if (timeBtwAttack <= 0)
         {
             if (Input.GetKey(KeyCode.Mouse1))
-
             {
                 PlayerAnim.SetTrigger("Attack");
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(AttackPos.position, attackRange,whatIsEnemies );
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(AttackPos.position, attackRange,whatIsEnemies);
+                if(Vector2.Distance(transform.position, bossAnim.transform.position) <= 2 && aR == true)
+                {
+                    bossAnim.SetFloat("BossHealth", currentBHP - damage);
+                    timeBtwAttack = startTimeBtwAttack;
+                    aR = false;
+                    StartCoroutine(Wait());
+                }
 
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    //if(GetComponent<EnemyHealth>() != null)
-                    //{
-                        enemiesToDamage[i].GetComponent<EnemyHealth>().health -= damage; enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage);
-
-                    //}
-
-
+                    enemiesToDamage[i].GetComponent<EnemyHealth>().health -= damage; //enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage);
+                    //enemiesToDamage[i].GetComponent<Animator>().SetFloat("BossHealth", currentBHP - damage);
                     if (GetComponent<BossController>() != null)
                     {
                         enemiesToDamage[i].GetComponent<BossController>().TakeDamage(damage);
@@ -60,6 +63,14 @@ public class PlayerAttack : MonoBehaviour
         
       
   
+    }
+
+    public IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(1.5f);
+        aR = true;
+
+
     }
 
     public void Attack( PlayerStats targetStats)
