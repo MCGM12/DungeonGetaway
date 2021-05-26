@@ -20,11 +20,14 @@ public class Caster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            FireBallCoolDown = 0;
+        }
         if(Time.time>nextFireTime) {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Debug.Log("FireBall");
+                //Debug.Log("FireBall");
                 Shoot();
                 nextFireTime = Time.time + FireBallCoolDown;
             } 
