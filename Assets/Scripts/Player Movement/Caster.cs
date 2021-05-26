@@ -7,6 +7,9 @@ public class Caster : MonoBehaviour
     public Transform FirePoint; // Transform used to shoot the fire ball 
     public GameObject FireBallPrefab;
 
+    public float FireBallCoolDown = 2 ;
+    private float nextFireTime = 0 ;
+   
     public float FireballForce = 20f; // FireBall Speed
     // Start is called before the first frame update
     void Start()
@@ -17,9 +20,14 @@ public class Caster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Shoot();
+
+        if(Time.time>nextFireTime) {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                Debug.Log("FireBall");
+                Shoot();
+                nextFireTime = Time.time + FireBallCoolDown;
+            } 
         }
     }
 
@@ -29,6 +37,7 @@ public class Caster : MonoBehaviour
         GameObject fireball = Instantiate(FireBallPrefab, FirePoint.position, FirePoint.rotation);
         Rigidbody2D rb2d = fireball.GetComponent<Rigidbody2D>();
         rb2d.AddForce(FirePoint.up * FireballForce, ForceMode2D.Impulse);
+       
         //FireAudio();
     }
 
