@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
 
     public CharacterStat Speed;
 
+    public Healthbar healthbar;
+
    
 
     public CharacterStat Health;
@@ -18,15 +20,17 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         currentHealth = maxHealth;
+
+        healthbar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage( int damage)
     {
         
 
-        //currentHealth -= damage;
-        currentHealth = currentHealth - damage;
-         
+        currentHealth -= damage;
+        //currentHealth = currentHealth - damage;
+        healthbar.SetHealth(currentHealth);
         Debug.Log(transform.name + " takes " + damage + " damage.");
 
         if (currentHealth <= 0)
@@ -36,6 +40,14 @@ public class PlayerStats : MonoBehaviour
         }
 
 
+    }
+
+     void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(10);
+        }
     }
 
     public virtual void  Die()
