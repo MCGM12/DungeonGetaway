@@ -15,12 +15,11 @@ public class AIControl : MonoBehaviour
 
     public bool playerSpotted;
 
-
     void Start()
     {
         patrol = GetComponent<AIPatrol>();
-        aiPath = GetComponent<AIPath>();
-        enemyAI = GetComponent<EnemyAI>();
+        //aiPath = GetComponent<AIPath>();
+        //enemyAI = GetComponent<EnemyAI>();
         fov = GetComponent<TestFOV>();
         dest = GetComponent<AIDestinationSetter>();
 
@@ -30,34 +29,21 @@ public class AIControl : MonoBehaviour
 
     }
 
-    
     void Update()
     {
         playerSpotted = fov.spotted;
         dest.target = player.transform;
         if (playerSpotted)
         {
-            //enemyAI.enabled = true;
             patrol.enabled = false;
-            //aiPath.enabled = false;
             dest.enabled = true;
-            if (Vector2.Distance(transform.position, player.transform.position) <= 0.75f && PlayerManager.grabbed == false)
-            {
-                PlayerManager.grabbed = true;
-                fov.spotted = false;
-                playerSpotted = false;
-            } 
-            else PlayerManager.grabbed = false;
+
+            
         }
-        else
-        {
-            //enemyAI.enabled = false;
-            patrol.enabled = true;
-            //aiPath.enabled = true;
-            dest.enabled = false;
-        }
+        
 
     }
+
     IEnumerator Wait(float time, bool change)
     {
         if(change)
