@@ -42,13 +42,9 @@ public class PlayerStats : MonoBehaviour
 
     }
 
-     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(10);
-        }
-    }
+    
+    
+    
 
     public virtual void  Die()
     {
