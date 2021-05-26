@@ -14,6 +14,7 @@ public class BossController : MonoBehaviour
 
     public Transform targetTransform;
     public float speed;
+    public Healthbar hb;
 
     //Animator m_Animator;
     //string m_ClipName;
@@ -24,7 +25,7 @@ public class BossController : MonoBehaviour
     {
         targetTransform = GameObject.Find("Player").transform;
         animator = GetComponent<Animator>();
-        
+        hb.SetMaxHealth((int)animator.GetFloat("BossHealth"));
 
     }
 
@@ -41,7 +42,11 @@ public class BossController : MonoBehaviour
         //transform.rotation = Quaternion.Euler(Vector3.forward * (angle + offset));
 
 
-        if (animator.GetFloat("BossHealth") >= 25) health = animator.GetFloat("BossHealth"); else if (animator.GetFloat("BossHealth") < 0) BossDead();
+        if (animator.GetFloat("BossHealth") >= 25)
+        {
+            health = animator.GetFloat("BossHealth");
+            hb.SetHealth((int)animator.GetFloat("BossHealth"));
+        } else if (animator.GetFloat("BossHealth") < 0) BossDead();
         if (Input.GetKeyDown(KeyCode.P))
         {
            

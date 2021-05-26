@@ -12,6 +12,10 @@ public class FireBall : MonoBehaviour
         damage = 25;
         Destroy(gameObject, 4f);
         Debug.Log("Fireball shot");
+        if(tag == "bossFireball")
+        {
+            damage = 5;
+        }
     }
 
     

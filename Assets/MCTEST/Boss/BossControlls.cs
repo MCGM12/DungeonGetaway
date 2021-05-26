@@ -8,10 +8,13 @@ public class BossControlls : StateMachineBehaviour
 {
     public float speed = 5f;
     public Transform player;
+    public GameObject bhp;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.Find("Player").transform;
+        bhp = player.GetComponent<BHPholder>().BHP;
+        bhp.SetActive(true);
 
     }
 
