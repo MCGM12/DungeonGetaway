@@ -766,6 +766,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3282675459118797911, guid: 487a5bf6a1932fd459988627ec41f2be,
+        type: 3}
+      propertyPath: FireBallCoolDown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3282675459552545410, guid: 487a5bf6a1932fd459988627ec41f2be,
         type: 3}
       propertyPath: startTimeBtwAttack

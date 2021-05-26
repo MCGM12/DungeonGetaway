@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -51,6 +52,9 @@ public class PlayerStats : MonoBehaviour
         // Dies in some way so like game over or respawn to a certain point 
 
         Debug.Log(transform.name + "died ");
+
+        SceneManager.LoadScene("GameOver"); 
+
     }
 
 }
