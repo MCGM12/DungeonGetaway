@@ -22,6 +22,10 @@ public class FireBall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Destroy(gameObject,5f);
+        if(collision.gameObject.tag =="wall")
+        {
+            Destroy(gameObject);
+        }
      
     }
 

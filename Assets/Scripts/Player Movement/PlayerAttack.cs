@@ -67,7 +67,7 @@ public class PlayerAttack : MonoBehaviour
 
     public IEnumerator Wait()
     {
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(timeBtwAttack);
         aR = true;
 
 
