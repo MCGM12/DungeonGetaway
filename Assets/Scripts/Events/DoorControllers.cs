@@ -7,6 +7,8 @@ public class DoorControllers : MonoBehaviour
 {
     public GameObject Extras;
     [SerializeField] private Animator bossControls;
+    public TilemapCollider2D t2d;
+    public TilemapRenderer tr;
 
     void Start()
     {
@@ -18,17 +20,18 @@ public class DoorControllers : MonoBehaviour
     {
         Debug.Log("DOORWAY BEING CLOSED, PLAYER ENTERED");
         //Extras.SetActive(true);
-        bossControls.enabled = true;
-        Extras.GetComponent<TilemapCollider2D>().enabled = true;
-        Extras.GetComponent<TilemapRenderer>().enabled = true;
+        if (bossControls != null) { bossControls.enabled = true; }
+
+        tr.enabled = true;
+        t2d.enabled = true;
     }
 
     private void OnDoorwayClose()
     {
         Debug.Log("DOORWAY BEING OPENED, PLAYER CAN EXIT");
         //Extras.SetActive(true);
-        Extras.GetComponent<TilemapCollider2D>().enabled = false;
-        Extras.GetComponent<TilemapRenderer>().enabled = false;
+        tr.enabled = false;
+        t2d.enabled = false;
     }
 
 

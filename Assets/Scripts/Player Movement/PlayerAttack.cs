@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
     public Animator PlayerAnim;
-    public Animator bossAnim;
+    private Animator bossAnim;
     float currentBHP;
     bool aR;
     
@@ -24,11 +24,13 @@ public class PlayerAttack : MonoBehaviour
     {
         aR = true;
         characterStat = GetComponent<PlayerStats>();
+        bossAnim = GameObject.Find("BossTest").GetComponent<Animator>();
     }
 
     void Update()
     {
-        currentBHP = bossAnim.GetFloat("BossHealth");
+        if(bossAnim != null) currentBHP = bossAnim.GetFloat("BossHealth");
+
         if (timeBtwAttack <= 0)
         {
             if (Input.GetKey(KeyCode.Mouse1))

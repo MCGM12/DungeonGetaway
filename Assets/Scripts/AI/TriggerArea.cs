@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerArea : MonoBehaviour
 {
-    public bool bossDead;
+    public bool bossDead, roomCleared;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
@@ -14,9 +14,10 @@ public class TriggerArea : MonoBehaviour
     }
     private void Update()
     {
-        if(bossDead)
+        if(bossDead || roomCleared)
         {
             GameEvents.current.DoorwayTriggerExit();
         }
+      
     }
 }
